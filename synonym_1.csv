@@ -1,0 +1,105 @@
+type,pattern,replacement
+abbreviation,ent,otolaryngology
+abbreviation,ob/gyn,obstetrics gynecology
+abbreviation,obgyn,obstetrics gynecology
+abbreviation,gi,gastroenterology
+abbreviation,peds,pediatrics
+abbreviation,psych,psychiatry
+abbreviation,ortho,orthopedic
+abbreviation,cardio,cardiology
+abbreviation,neuro,neurology
+abbreviation,endo,endocrinology
+abbreviation,derm,dermatology
+abbreviation,hema,hematology
+abbreviation,onco,oncology
+abbreviation,ophth,ophthalmology
+abbreviation,rehab,rehabilitation
+abbreviation,pt,physical therapy
+abbreviation,ot,occupational therapy
+abbreviation,fp,family practice
+abbreviation,pcp,primary care physician
+abbreviation,np,nurse practitioner
+abbreviation,crna,certified registered nurse anesthetist
+abbreviation,pa,physician assistant
+abbreviation,md,medical doctor
+abbreviation,do,doctor of osteopathy
+abbreviation,aba,applied behavioral analysis
+abbreviation,ir,interventional radiology
+abbreviation,ip,inpatient
+abbreviation,op,outpatient
+abbreviation,uc,urgent care
+abbreviation,optho,ophthalmology
+abbreviation,ob,obstetrics
+abbreviation,gyn,gynecology
+synonym,family practice,family medicine
+synonym,general practice,family medicine
+synonym,general practitioner,family medicine
+synonym,behavioral health,psychiatry
+synonym,internal med,internal medicine
+synonym,addiction med,addiction medicine
+synonym,addiction psychiatrist,addiction medicine
+synonym,anesthe,anesthesiology
+synonym,nephr,nephrology
+synonym,gastro,gastroenterology
+synonym,pedia,pediatrics
+synonym,cardiologist,cardiology
+synonym,orthopaed,orthopedic
+synonym,orthopaedics,orthopedic
+synonym,occupational therapist,occupational therapy
+synonym,physical therapist,physical therapy
+synonym,rehabilitation medicine,physical medicine rehabilitation
+synonym,speech pathologist,speech language pathology
+synonym,speech language pathologist,speech language pathology
+synonym,lab,laboratory
+synonym,path,pathology
+synonym,immunologist,immunology
+synonym,dermatologist,dermatology
+synonym,urgent care clinic,urgent care
+synonym,community health center,primary care
+synonym,hospice program,hospice care
+synonym,mental health,psychiatry
+synonym,child psychiatry,psychiatry child adolescent
+synonym,child adolescent psychiatry,psychiatry child adolescent
+synonym,psychology pediatric,psychology child adolescent
+synonym,geriatrics,geriatric medicine
+synonym,sports med,sports medicine
+synonym,med genetics,medical genetics
+synonym,mohs,dermatology mohs micrographic
+synonym,aba therapy,applied behavioral analysis
+synonym,pulmo,pulmonology
+synonym,infectious dis,infectious disease
+synonym,endocrine,endocrinology
+synonym,hematology oncology,hematology oncology
+synonym,ped hem/onc,pediatric hematology oncology
+synonym,hand surgery,hand surgeon
+synonym,plastic surg,plastic surgery
+synonym,vascular surg,vascular surgery
+synonym,neurosurg,neurosurgery
+synonym,pain management,pain medicine
+synonym,pain med,pain medicine
+synonym,rehab med,physical medicine rehabilitation
+synonym,urgent care physician,urgent care
+synonym,allergy immunology,allergy immunology
+synonym,nephro,nephrology
+synonym,psychiatrist,psychiatry
+synonym,neuropsych,neuropsychology
+synonym,clinical psychologist,psychology
+synonym,clinical pathology,pathology clinical
+synonym,cytopathology,pathology cytopathology
+synonym,forensic pathology,pathology forensic
+synonym,pediatric cardiology,cardiology pediatric
+synonym,pediatric neurology,neurology pediatric
+synonym,interventional cardiology,cardiology interventional
+synonym,interventional radiology,radiology interventional
+synonym,diagnostic radiology,radiology diagnostic
+synonym,radiation oncology,radiology radiation oncology
+synonym,paediatrics,pediatrics
+synonym,haematology,hematology
+synonym,anaesthesiology,anesthesiology
+synonym,orthopaedics,orthopedic
+synonym,gynaecology,gynecology
+synonym,dr,doctor
+synonym,physician doctor,doctor
+synonym,nurse practitioner,primary care
+synonym,nurse,registered nurse
+synonym,technician,technologist

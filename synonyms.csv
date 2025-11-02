@@ -1,0 +1,1001 @@
+type,pattern,replacement
+abbreviation,pm,pulmonary-medicine
+abbreviation,dp,dept of psychiatry
+abbreviation,ct,0ccupational therapist
+abbreviation,ch,cardiology hospital
+abbreviation,ac,anesthesiology center
+abbreviation,ps,psychiatry service
+abbreviation,rh,rural hospital
+abbreviation,gc,genetic counselor - ms
+synonym,otolaryngologist,otolaryngology
+abbreviation,hp,hospital pathology
+synonym,ob gyn program,ob/gyn program
+abbreviation,ps,pharmacy services
+abbreviation,ud,urology dept
+synonym,audiologist service,audiology service
+synonym,gynecology oncology,gynecology/oncology
+synonym,orofacial pain tmj,orofacial pain/tmj
+abbreviation,ch,children hospital
+synonym,dr. dermatologist,dr. dermatology
+synonym,ob g,ob/g
+abbreviation,dp,dentist - periodontics
+abbreviation,hp,hematology - pathology
+abbreviation,ra,record administrator
+abbreviation,cp,clinical pharmacology - 208u00000x
+abbreviation,nc,nuclear cardiology
+abbreviation,hi,hospice - inpatient
+abbreviation,al,ambulance - land
+abbreviation,ps,pharmacy - specialty
+synonym,vascular neurologist,vascular neurology
+synonym,urologist practice,urology practice
+synonym,radiologist program,radiology program
+abbreviation,rd,radiology division
+abbreviation,pc,pathology - cytopathology - 207zc0500x
+abbreviation,pl,physiological laboratory
+abbreviation,pr,pediatrics - rheumatology - 2080p0216x
+abbreviation,vs,dr. vascular surgery
+abbreviation,lm,licensed midwife
+abbreviation,dd,dept of dermatology
+abbreviation,nm,nuclear medicine - 207u00000x
+synonym,dermatologist dept,dermatology dept
+abbreviation,rc,rehabilitation counselor
+abbreviation,re,dr. reproductive endocrinology
+abbreviation,ci,cardiology - interventional - 207ri0011x
+abbreviation,fp,family planning
+synonym,surgical oncologist,surgical oncology
+abbreviation,pc,pediatrics center
+abbreviation,pp,pharmacy program
+synonym,haematology clinic,hematology clinic
+abbreviation,ph,pathology - hematology - 207zh0000x
+abbreviation,rc,radiologyclinic/center
+synonym,radiologist unit,radiology unit
+abbreviation,so,surgical oncology - 2086x0206x
+synonym,nephrologist dept,nephrology dept
+abbreviation,io,individual orthotist
+abbreviation,th,taxi hospital
+abbreviation,ph,pediatrics hospital
+abbreviation,nc,nurse (cnp)
+abbreviation,mc,methadone clinic
+abbreviation,nh,neuropsychiatry hospital
+abbreviation,ou,ophthalmology unit
+synonym,ob gyn practice,ob/gyn practice
+abbreviation,pr,physicalmedicine&rehab
+abbreviation,pp,pathology practice
+abbreviation,rc,respite care
+abbreviation,hi,hospice- inpatient
+abbreviation,gd,ob/gyn dept
+abbreviation,re,reproductive endocrinology
+abbreviation,cp,cardiology practice
+synonym,radiologist mobil,radiology mobil
+abbreviation,ba,behavior analyst
+abbreviation,eo,ent (otolaryngology)
+abbreviation,ip,immunology - pediatric
+abbreviation,po,pathology-oral
+abbreviation,np,neuropsychiatry practice
+abbreviation,np,neurology program
+abbreviation,cs,chiropractor - sports
+abbreviation,ec,endocrinology center
+abbreviation,gs,general surgery
+abbreviation,pu,pediatrics unit
+abbreviation,cp,clinical-psychology
+abbreviation,os,other specialty
+abbreviation,du,diagnostic ultrasound
+abbreviation,nu,nephrology - usa
+abbreviation,nu,neuropsychiatry unit
+abbreviation,od,ophthalmology dept
+abbreviation,rs,radiology services
+abbreviation,ms,multi-specialty
+synonym,neurologist division,neurology division
+abbreviation,pp,psychiatry program
+abbreviation,os,other - surgical
+abbreviation,ou,optician unit
+abbreviation,ns,nephrology (specialist)
+abbreviation,pd,pathology division
+abbreviation,pd,pediatrics division
+abbreviation,hs,hematology services
+synonym,proctologist,proctology
+abbreviation,np,naturopathic physician
+synonym,ob gyn,ob/gyn
+abbreviation,da,dept of anesthesiology
+abbreviation,ch,chiropractic hospital
+synonym,anaesthesiology,anesthesiology
+abbreviation,pd,psychiatry dept
+abbreviation,so,surgery - orthopaedic
+synonym,surgical 0ncologist,surgical 0ncology
+abbreviation,au,anesthesiology unit
+abbreviation,nm,nutritional medicine
+abbreviation,uo,urological oncology
+abbreviation,pa,pediatric anesthesiology
+synonym,dietician nutrition,dietician/nutrition
+abbreviation,aa,anesthesiologist assistant
+synonym,urologist services,urology services
+abbreviation,hp,hematology (pathology)
+synonym,ophthalmologist,ophthalmology
+synonym,nuclear cardiologist,nuclear cardiology
+synonym,dr. pathologist,dr. pathology
+abbreviation,pc,pharmacy - clinic
+abbreviation,nc,neuropsychiatry clinic
+abbreviation,oc,optician clinic
+synonym,radiation 0ncologist,radiation 0ncology
+abbreviation,pc,psychologist - clinical - 103tc0700x
+abbreviation,ru,radiology - usa
+synonym,oncologist program,oncology program
+abbreviation,mg,medical genetics - md
+abbreviation,ts,thoracic surgery
+abbreviation,am,adult medicine
+abbreviation,al,ambulance-land
+abbreviation,ai,allergy & immunology - 207k00000x
+abbreviation,cn,clinical neuropsychologist - 103g00000x
+abbreviation,ad,audiology division
+synonym,nephrologist unit,nephrology unit
+synonym,neurotologist,neurotology
+abbreviation,ph,pathology - hematology
+synonym,neuropathologist,neuropathology
+abbreviation,ce,cardiology - electrophysiology - 207rc0001x
+synonym,haematology/oncology,hematology/oncology
+abbreviation,pp,pediatrics - pulmonology - 2080p0214x
+abbreviation,tu,taxi - usa
+abbreviation,to,technologist - other
+abbreviation,dc,diagnostic center
+abbreviation,mo,medical oncology - 207rx0202x
+abbreviation,dr,dietitian- registered
+abbreviation,rt,residential treatment
+abbreviation,th,transplant hepatology
+abbreviation,fr,freestanding(ruralhealthclinic)
+abbreviation,od,optician division
+synonym,orthopedic surgery,orthopaedic surgery
+synonym,orthopaedic trauma,orthopedic trauma
+synonym,perinatologist,perinatology
+abbreviation,pc,pathology clinic
+synonym,dr. neurologist,dr. neurology
+abbreviation,dp,dentist - prosthodontics
+abbreviation,od,optician dept
+abbreviation,ps,peer specialist
+synonym,pathologist services,pathology services
+abbreviation,ps,plastic-surgery
+synonym,oncologist facility,oncology facility
+abbreviation,dp,dietitian program
+abbreviation,ph,pediatric hepatology
+abbreviation,cp,clinical pharmacology
+abbreviation,rp,radiological physics
+synonym,neuropsychologist,neuropsychology
+abbreviation,rc,rehabilitation clinic
+synonym,nurse  rn,nurse /rn
+abbreviation,nm,neuromusculoskeletal medi
+abbreviation,vh,veterans hospital
+synonym,neurophysiologist,neurophysiology
+abbreviation,pd,pediatrics dept
+abbreviation,nd,nephrology dept
+abbreviation,na,nurses aide
+abbreviation,sp,speech pathologist
+abbreviation,pn,psychiatry & neurology
+abbreviation,pu,pathology unit
+abbreviation,pd,dr. pediatric dentistry
+abbreviation,sl,speech-langua
+synonym,paediatrics division,pediatrics division
+abbreviation,dp,dentistry program
+abbreviation,fm,family-medicine
+abbreviation,ap,audiology practice
+abbreviation,am,addiction-medicine
+synonym,laryngologist,laryngology
+abbreviation,op,optician practice
+abbreviation,pd,pediatric dentist
+abbreviation,fs,free standing (ru
+abbreviation,pm,pain-management
+abbreviation,vn,vascular neurology
+synonym,dr. cardiologist,dr. cardiology
+abbreviation,st,speech therapist
+abbreviation,ap,anatomic pathology
+abbreviation,ud,urology division
+synonym,dr. endocrinologist,dr. endocrinology
+abbreviation,tc,taxi center
+synonym,clinal psychologist,clinal psychology
+synonym,cytopathologist,cytopathology
+abbreviation,gu,gastroenterology unit
+abbreviation,po,pharmacist oncology
+abbreviation,rm,radiology mobil
+abbreviation,ad,audiology dept
+abbreviation,cs,cardiology services
+abbreviation,gs,gastroenterology service
+abbreviation,ns,nephrology services
+abbreviation,nm,dr. nuclear medicine
+abbreviation,eu,epilepsy unit
+abbreviation,dd,dentistry dept
+abbreviation,pd,pulmonary disease
+abbreviation,cp,counselor - professional - 101yp2500x
+synonym,audiologist dept,audiology dept
+abbreviation,up,urology practice
+abbreviation,dt,dietetic technician
+synonym,paediatrics clinic,pediatrics clinic
+abbreviation,di,dermatologic immunology
+synonym,ob gyn services,ob/gyn services
+abbreviation,ou,ophthalmology - usa
+abbreviation,pm,dr. pulmonary medicine
+synonym,medical oncologist,medical oncology
+synonym,urologist - usa,urology - usa
+abbreviation,de,diabetes education
+abbreviation,mu,midwife unit
+abbreviation,po,dr. pediatric optometrist
+abbreviation,np,nephrology (pcp)
+synonym,audiologist clinic,audiology clinic
+abbreviation,gu,ob/gyn unit
+abbreviation,po,pharmacist - oncology
+abbreviation,gh,gastroenterology hospital
+synonym,chemical pathologist,chemical pathology
+abbreviation,pr,plastic/reconstructive
+synonym,radiologist center,radiology center
+abbreviation,nu,neurology unit
+abbreviation,ts,trauma surgery - 2086s0127x
+abbreviation,dh,dental hygienist
+synonym,pain clinic center,pain clinic/center
+abbreviation,pp,pediatric pathology
+abbreviation,cs,cardiothoracic-surgery
+synonym,anaesthesiology unit,anesthesiology unit
+abbreviation,dc,dept of chiropractic
+abbreviation,mh,midwife hospital
+abbreviation,mg,ph.d. medical genetics
+abbreviation,pd,psychiatry division
+abbreviation,ps,pediatrics service
+synonym,hematology oncology,hematology/oncology
+abbreviation,nr,nurse registry
+abbreviation,ph,public-health
+abbreviation,pr,podiatrist - radiology
+abbreviation,op,oral pathology
+abbreviation,ps,psychologist - school
+synonym,pulmonologist,pulmonology
+abbreviation,pr,pulmonary rehabilitation
+abbreviation,ot,occupational therapist - 225x00000x
+abbreviation,ns,neurology services
+abbreviation,hp,hematology program
+abbreviation,ms,medical specialty
+abbreviation,dt,dental therapist
+abbreviation,pd,procedural dermatology
+synonym,clinical pathologist,clinical pathology
+synonym,toxicologist,toxicology
+synonym,gastroenterologist,gastroenterology
+abbreviation,ps,pediatrics services
+abbreviation,pu,psychiatry unit
+abbreviation,pu,pediatric urologist
+synonym,nephrologist - usa,nephrology - usa
+synonym,gerontologist - nu,gerontology - nu
+abbreviation,pr,psychologist - rehabilitation
+abbreviation,st,surgery - trauma
+abbreviation,bt,behavioral technician - 106s00000x
+abbreviation,pr,pediatric rehabilitation
+abbreviation,ho,hematology & oncology - 207rh0003x
+abbreviation,dd,dermatopathology - dermatology
+synonym,nephrologist/esrd,nephrology/esrd
+synonym,ob gyn center,ob/gyn center
+abbreviation,pc,pediatrics - cardiology - 2080p0202x
+abbreviation,dh,dentistry hospital
+abbreviation,pt,physical therapist - 225100000x
+abbreviation,pm,pulmonary med1c1ne
+abbreviation,cc,critical care - 363lp0222x
+synonym,surgery oncologist,surgery oncology
+abbreviation,np,nurse practitioner
+abbreviation,ro,dr. radiation oncology
+abbreviation,pm,physical med
+abbreviation,ct,cma - technician
+abbreviation,dg,dept of ob/gyn
+abbreviation,rs,retina specialist
+synonym,ob gyn - usa,ob/gyn - usa
+abbreviation,od,ophthalmology division
+synonym,dr. urologist,dr. urology
+abbreviation,rc,radiology center
+abbreviation,pr,podiatrics - radiology
+abbreviation,dc,dental clinic
+abbreviation,ot,orthopedic trauma
+abbreviation,go,gynecology/oncology
+abbreviation,cp,chiropractor - pediatric
+abbreviation,cb,community based - 251g00000x
+synonym,dept of audiologist,dept of audiology
+synonym,pathologist service,pathology service
+synonym,dermatologist,dermatology
+abbreviation,fm,dr. family medicine
+abbreviation,do,dept of oncology
+abbreviation,so,surgical-oncology
+abbreviation,om,oral & maxillofacial
+synonym,hematologist clinic,hematology clinic
+abbreviation,lp,laboratory - physiological - 293d00000x
+abbreviation,pp,pathology program
+abbreviation,pa,podiatric assistant
+abbreviation,ai,allergy/immunology
+abbreviation,tp,technologist - pathology
+abbreviation,dd,dermatology dermatopathology
+abbreviation,cs,cardiac surgery
+synonym,audiologist,audiology
+synonym,radiationoncologist,radiationoncology
+abbreviation,gp,general practice - 208d00000x
+abbreviation,au,audiology - usa
+synonym,nephrologist clinic,nephrology clinic
+abbreviation,ms,midwife service
+abbreviation,em,emergency medicine - 207p00000x
+abbreviation,am,addiction med
+abbreviation,cc,chiropractic clinic
+abbreviation,ld,licensed dietician
+abbreviation,pm,preventive medicine
+abbreviation,cn,certified nurse - 367a00000x
+abbreviation,em,endocrinology & metabolism
+abbreviation,da,dentist - anesthesiology
+abbreviation,gm,geriatric med
+abbreviation,ts,translation services
+abbreviation,mc,midwife clinic
+abbreviation,gn,gerontology-nursepractitioner
+abbreviation,gp,dr. general practice
+abbreviation,ph,pathology hamaetology
+synonym,gynaecology,gynecology
+abbreviation,pc,psychiatry center
+abbreviation,nm,nuclear med
+abbreviation,dp,dentistry practice
+abbreviation,gd,general dentistry
+abbreviation,hu,hematology - usa
+abbreviation,nd,neuropsychiatry division
+abbreviation,pp,pharmacist - pharmacotherapy
+abbreviation,mo,med office
+abbreviation,hi,home infusion
+abbreviation,op,optometrist - pediatrics - 152wp0200x
+abbreviation,po,pediatric-optometrist
+abbreviation,ds,dentistry services
+abbreviation,id,immunology - dermatology
+synonym,orthopedic trauma,orthopaedic trauma
+abbreviation,pc,psychologist - counseling - 103tc1900x
+abbreviation,nc,neurology clinic
+abbreviation,pd,pharmacy dept
+abbreviation,cp,cardiology program
+abbreviation,pp,pediatrics program
+abbreviation,ds,dietitian service
+abbreviation,cd,cardiovascular disease
+abbreviation,cp,chiropractic program
+synonym,dept of oncologist,dept of oncology
+abbreviation,gp,gastroenterology practice
+synonym,dept of radiologist,dept of radiology
+abbreviation,rp,rehabilitation practitioner
+abbreviation,as,audiology services
+synonym,haematology center,hematology center
+abbreviation,na,nurse anesthetist
+abbreviation,so,surgical oncologist
+abbreviation,cr,chiropractor-radiology
+abbreviation,uc,urology center
+abbreviation,ac,audiology center
+abbreviation,ac,audiology clinic
+abbreviation,ot,occupational therapist
+abbreviation,ce,cardiac electrophysiology
+abbreviation,ou,optician - usa
+abbreviation,dc,dietitian center
+abbreviation,ah,audiology hospital
+abbreviation,oa,orthopedic assistant
+abbreviation,cp,clinic pharmacy
+synonym,haematology,hematology
+abbreviation,de,diabetic educator
+abbreviation,rs,radiology service
+synonym,haematology unit,hematology unit
+abbreviation,lp,licensed psychotherapist
+abbreviation,mg,dr. medical genetics
+abbreviation,dp,dept of pathology
+abbreviation,gh,ob/gyn hospital
+abbreviation,pp,psychologist - psychotherapy
+abbreviation,ns,neurology service
+abbreviation,du,dentistry - usa
+abbreviation,om,oral medicine
+synonym,neurologist clinic,neurology clinic
+synonym,rheumatologist,rheumatology
+abbreviation,am,aerospace medicine
+abbreviation,rc,radiologymobileclinic/center
+synonym,phlebologist,phlebology
+abbreviation,hf,home iv (facility)
+abbreviation,rn,dr. registered nurse
+synonym,psychologist (phd),psychology (phd)
+abbreviation,ps,plastic surgery - 208200000x
+abbreviation,dn,dietician/nutrition
+synonym,dept of cardiologist,dept of cardiology
+synonym,radiologist,radiology
+abbreviation,ah,agency - habilitation - 251c00000x
+abbreviation,os,optician service
+abbreviation,pp,psychology â€“ pediatric
+abbreviation,hm,home modifications - 171wh0202x
+abbreviation,ds,dentistry service
+abbreviation,pm,pediatric 0pt0metrist
+abbreviation,eu,endocrinology - usa
+abbreviation,pv,private vehicle - 347c00000x
+abbreviation,gp,ob/gyn program
+synonym,anatomic pathologist,anatomic pathology
+abbreviation,gc,ob/gyn center
+abbreviation,pm,palliative medicine
+abbreviation,ch,community health
+abbreviation,aa,anesthesiologist assistant - 367h00000x
+abbreviation,hc,hospice care
+abbreviation,ro,radiation oncology
+synonym,foot ankle surgery,foot/ankle surgery
+abbreviation,md,midwife dept
+abbreviation,os,oncology services
+abbreviation,pm,dr. pain management
+abbreviation,nd,nutritionist/dietitian
+synonym,pathologist center,pathology center
+synonym,pathologist,pathology
+abbreviation,tr,therapeutic radiology
+synonym,oncologist dept,oncology dept
+abbreviation,gp,general practice
+abbreviation,sw,social worker
+synonym,ob gyn hospital,ob/gyn hospital
+abbreviation,pd,z-pediatric dermatology
+abbreviation,ac,alzheimer center
+abbreviation,so,surgery oncology
+abbreviation,hc,hematology center
+abbreviation,pc,psychiatry clinic
+abbreviation,ap,addiction psychiatry
+abbreviation,eu,endocrinology unit
+abbreviation,im,internal-medicine
+abbreviation,rd,registered dietitian
+abbreviation,dp,dentist - periodontics - 1223p0300x
+abbreviation,dm,diabetes & metabolism
+abbreviation,cn,clinical neurophsiology
+abbreviation,at,athletic trainer
+abbreviation,pr,portable x-ray
+abbreviation,ap,audiology program
+abbreviation,de,dentist - endodontist
+abbreviation,dm,dept of midwife
+abbreviation,dp,dietitian - pediatric
+abbreviation,cs,counselor - school
+abbreviation,ns,neuropsychiatry service
+synonym,oncologist center,oncology center
+abbreviation,uc,urgent care
+abbreviation,no,neuro-opthalmology
+abbreviation,np,dr. naturopathic physician
+synonym,dr. ophthalmologist,dr. ophthalmology
+abbreviation,tr,therapeutic roentgenology
+abbreviation,im,internal medicine - 207r00000x
+abbreviation,sm,sleep med
+abbreviation,mg,multispecialty group
+abbreviation,bp,bcba paraprofessional
+abbreviation,pp,pediatrics - physician
+abbreviation,cp,chiropractic practice
+abbreviation,ds,dermatology service
+synonym,urologist service,urology service
+abbreviation,np,nurse practitioner - 363l00000x
+abbreviation,ta,transportation - agency
+abbreviation,ba,behavioral analyst
+abbreviation,he,health educator
+synonym,cardiologist unit,cardiology unit
+abbreviation,ph,pathology hospital
+abbreviation,es,endocrinology services
+abbreviation,tc,taxi clinic
+abbreviation,go,gynecological oncology
+abbreviation,cm,certified midwife (cm)
+abbreviation,ap,addiction psychiatrists
+synonym,orthopaedic-surgery,orthopedic-surgery
+abbreviation,os,oral surgery
+abbreviation,mp,medical - physician
+abbreviation,os,optician services
+abbreviation,dc,dermatology clinic
+abbreviation,ot,occupational-therapist
+abbreviation,hp,hospital - psychiatric - 283q00000x
+abbreviation,dt,dept of taxi
+abbreviation,oc,ophthalmology center
+synonym,oncologist division,oncology division
+abbreviation,gp,ob/gyn practice
+abbreviation,mg,medical genetics
+synonym,radiologist practice,radiology practice
+synonym,nephrologist (pcp),nephrology (pcp)
+synonym,electrophysiologist,electrophysiology
+abbreviation,oh,optician hospital
+abbreviation,nc,neuropsychiatry center
+abbreviation,cn,chiropractor - neurology
+abbreviation,ah,anesthesiology hospital
+abbreviation,de,dentist - endodontics - 1223e0200x
+abbreviation,np,neuropsychiatry program
+abbreviation,rn,radiology - neuroradiology - 2085n0700x
+abbreviation,am,dr. addiction medicine
+abbreviation,os,oncology service
+abbreviation,au,audiology unit
+abbreviation,pc,psychologist - counseling
+abbreviation,pd,pediatric dentistry
+synonym,radiologist - usa,radiology - usa
+abbreviation,nm,nurse (msn)
+abbreviation,ed,endocrinology dept
+abbreviation,ep,endocrinology practice
+abbreviation,oa,otolaryngic allergy
+abbreviation,ts,"therapy pt, ot, slp"
+abbreviation,em,emergency-medicine
+abbreviation,dc,dentistry center
+synonym,haematology - usa,hematology - usa
+synonym,urologist program,urology program
+abbreviation,vm,vehicle modifications
+abbreviation,cp,"counselor, professional"
+abbreviation,bs,bariatric surgery
+synonym,hematologist - usa,hematology - usa
+synonym,hepatologist,hepatology
+synonym,nuclear radiologist,nuclear radiology
+abbreviation,nc,nephrology clinic
+abbreviation,pc,pharmacy - compounding
+synonym,surgical-oncologist,surgical-oncology
+abbreviation,au,anesthesiology - usa
+abbreviation,cl,clinal laboratory
+abbreviation,su,substance use - 261qr0405x
+abbreviation,ns,neurological surgery - 207t00000x
+abbreviation,gp,geriatric psychiatrists
+abbreviation,dd,dietitian division
+abbreviation,ac,anesthesiology clinic
+abbreviation,mn,medical nuclear
+abbreviation,ph,"psychology, hspp"
+synonym,neuro-opthalmologist,neuro-opthalmology
+abbreviation,uh,urology hospital
+abbreviation,do,dentist-orthodonture
+abbreviation,np,nephrology practice
+synonym,pathologist-oral,pathology-oral
+abbreviation,pp,pharmacy practice
+abbreviation,dp,dept of pharmacy
+abbreviation,dd,dermatology dept
+synonym,dr. radiologist,dr. radiology
+abbreviation,cp,counseling psychologist
+abbreviation,mh,mental health
+abbreviation,cd,chiropractic dept
+abbreviation,gp,gastroenterology program
+abbreviation,op,oncology practice
+abbreviation,oc,oncology clinic
+abbreviation,dr,diagnostic radiology
+synonym,haematology dept,hematology dept
+abbreviation,pi,pathology - immunology - 246qi0000x
+abbreviation,pd,pharmacy division
+abbreviation,sp,surgery - pediatric
+abbreviation,cc,cardiology center
+abbreviation,pa,physician assistant - 363a00000x
+abbreviation,fc,fluoride certification
+abbreviation,op,orthotics & prosthetics
+abbreviation,hm,hyperbaric medicine
+abbreviation,pp,psychiatry practice
+abbreviation,ph,pharmacy hospital
+synonym,oncologist practice,oncology practice
+abbreviation,pn,pathology - neuropathology - 207zn0500x
+synonym,endocrinologist,endocrinology
+abbreviation,gs,gastroenterology services
+abbreviation,rn,registered-nurse
+abbreviation,ne,nephrology/esrd
+abbreviation,ec,endocrinology clinic
+abbreviation,pc,pastoral counselor
+abbreviation,gc,ob/gyn clinic
+synonym,audiologist unit,audiology unit
+synonym,cardiologist - usa,cardiology - usa
+abbreviation,cl,clinical-laboratory
+abbreviation,gc,genetics clinic
+abbreviation,vc,voluntary or charitable
+abbreviation,os,orthopaedic surgery
+abbreviation,st,speech therapy
+synonym,neurologist practice,neurology practice
+synonym,urogynecologist,urogynecology
+abbreviation,du,dept of urology
+abbreviation,na,nurse's aide
+abbreviation,dp,dentist - pedodontics
+abbreviation,up,urology program
+abbreviation,aa,ambulance - air
+abbreviation,gd,gastroenterology division
+synonym,dept of paediatrics,dept of pediatrics
+abbreviation,ph,psychiatry hospital
+abbreviation,pd,pathology - dermatopathology - 207zd0900x
+synonym,immunologist,immunology
+abbreviation,nd,1nfectious disease
+abbreviation,ds,dietitian services
+synonym,audiologist center,audiology center
+abbreviation,hp,hematology practice
+abbreviation,st,surgical technologist
+abbreviation,na,not available
+abbreviation,cs,cardiology service
+abbreviation,pe,pediatrics - endocrinology - 2080p0205x
+abbreviation,ts,transplant surgery - 204f00000x
+synonym,ob gyn service,ob/gyn service
+synonym,mh sa agency,mh/sa agency
+synonym,urologist dept,urology dept
+abbreviation,am,adolescent medicine
+abbreviation,po,pediatric optometrist
+abbreviation,oh,orthopaedic hand
+abbreviation,mp,midwife practice
+abbreviation,so,surgery oral
+abbreviation,lc,lactation consultant
+synonym,0phthalmologist,0phthalmology
+abbreviation,eh,endocrinology hospital
+abbreviation,dp,dept of pediatrics
+synonym,oral pathologist,oral pathology
+abbreviation,pc,psychologists counseling
+abbreviation,wa,wic agency
+abbreviation,op,ophthalmology program
+abbreviation,rn,registered nurse
+abbreviation,cr,colon & rectal
+abbreviation,nr,nuclear radiology
+abbreviation,ip,individual pharmacist
+abbreviation,st,specialist/technologist
+abbreviation,ad,anesthesiology division
+abbreviation,nu,nephrology unit
+synonym,audiologist program,audiology program
+abbreviation,gc,genetic counseling
+abbreviation,dh,dietitian hospital
+abbreviation,mt,medical toxicology
+abbreviation,id,infectious disease - 207ri0200x
+abbreviation,wc,walk-in center
+abbreviation,np,nephrology program
+abbreviation,pg,pediatric genetics
+abbreviation,am,addiction medicine
+abbreviation,em,emergency med
+abbreviation,nh,nephrology hospital
+synonym,radiation-oncologist,radiation-oncology
+abbreviation,mt,massage therapist
+synonym,haematology division,hematology division
+abbreviation,st,surgery - thoracic
+synonym,paediatrics center,pediatrics center
+abbreviation,cp,counselor - professional
+synonym,pathologist unit,pathology unit
+abbreviation,rn,radiation 0ncology
+abbreviation,ce,customized equipment
+abbreviation,fp,forensic pathology
+abbreviation,sh,special hospital
+synonym,radiologist service,radiology service
+synonym,cardiologist center,cardiology center
+abbreviation,dp,dentist - pediatrics
+synonym,oncologist hospital,oncology hospital
+abbreviation,pu,psychiatry - usa
+abbreviation,uu,urology unit
+abbreviation,ps,dr. plastic surgery
+synonym,cardiologist dept,cardiology dept
+abbreviation,ph,psychiatric hospital
+abbreviation,no,neuro ophthalmology
+synonym,paediatrics service,pediatrics service
+abbreviation,dp,dentist-periodontist
+synonym,paediatrics program,pediatrics program
+abbreviation,cl,clinical laboratory
+abbreviation,sh,surgery - hand
+abbreviation,cp,dr. clinical psychology
+synonym,orthopaedic surgery,orthopedic surgery
+abbreviation,ts,taxi services
+abbreviation,tt,technician/technologist
+synonym,dept of neurologist,dept of neurology
+synonym,oncologist - usa,oncology - usa
+abbreviation,gs,ob/gyn services
+synonym,pathologist dept,pathology dept
+abbreviation,at,art therapist
+synonym,nose and throat),nose & throat)
+synonym,hematologist dept,hematology dept
+abbreviation,fp,forensic psychiatry
+synonym,neurologist service,neurology service
+synonym,orthopedic hand,orthopaedic hand
+abbreviation,dh,dept of hematology
+synonym,cardiologist clinic,cardiology clinic
+abbreviation,tc,transportation - commercial
+synonym,surgicaloncologist,surgicaloncology
+abbreviation,hu,hematology unit
+synonym,ob gyn clinic,ob/gyn clinic
+synonym,radiologist hospital,radiology hospital
+abbreviation,op,outpatient psychiatric
+abbreviation,cs,chiropractic service
+abbreviation,hs,hypertension specialist
+abbreviation,nm,nurse midwife
+abbreviation,dd,dermatology - dermatopathology - 207nd0900x
+abbreviation,cs,cardiothoracic surgery
+abbreviation,cs,cardiovascular surgery
+abbreviation,rc,recovery clinic
+abbreviation,rh,radiology hospital
+synonym,ob gyn dept,ob/gyn dept
+abbreviation,nm,neuromuscular medicine
+abbreviation,cn,clinical neuropsychologist
+abbreviation,gd,gastroenterology dept
+abbreviation,pr,psychologist - rehabilitation - 103tr0400x
+abbreviation,td,taxi division
+synonym,dept of pathologist,dept of pathology
+abbreviation,ts,taxi service
+abbreviation,pc,pharmacy center
+synonym,urologist clinic,urology clinic
+synonym,rn rcs,rn/rcs
+abbreviation,oh,oncology hospital
+synonym,pharmacologist,pharmacology
+abbreviation,pu,pediatrics - usa
+abbreviation,pi,pharmacy - institutional
+abbreviation,pc,pain clinic
+abbreviation,cd,cardiology dept
+abbreviation,de,diabetes educator
+abbreviation,rd,radiology dept
+abbreviation,ps,pediatric surgery - 2086s0120x
+abbreviation,du,dermatology - usa
+abbreviation,dc,dept of cardiology
+synonym,dermatologist unit,dermatology unit
+abbreviation,cp,certified psychotherapist
+abbreviation,rc,rehabilitation chiropractor
+abbreviation,cc,chiropractic center
+abbreviation,cs,dr. cardiothoracic surgery
+abbreviation,pp,pediatrics practice
+synonym,cardiologist,cardiology
+abbreviation,ad,anesthesiology dept
+synonym,dept of urologist,dept of urology
+abbreviation,nu,neurology - usa
+synonym,hematologist unit,hematology unit
+abbreviation,ou,oncology - usa
+abbreviation,gm,dr. geriatric medicine
+abbreviation,mg,medical-genetics
+abbreviation,im,internal med
+synonym,dermatologist - usa,dermatology - usa
+abbreviation,gm,general medicine
+abbreviation,cs,chiropractic services
+abbreviation,cc,clinic/center - 261q00000x
+abbreviation,gs,ob/gyn service
+abbreviation,id,dr. infectious disease
+abbreviation,st,surgery trauma
+abbreviation,cr,chiropractor - rehabilitation - 111nr0400x
+synonym,neurologist unit,neurology unit
+abbreviation,dp,dentist - pediatric
+abbreviation,rn,registered - nutrition
+synonym,dr. anaesthesiology,dr. anesthesiology
+abbreviation,np,neurodevelopmental pediatrician
+abbreviation,cc,critical care - 363ln0005x
+abbreviation,nm,nuclear-medicine
+abbreviation,cr,certified registered
+abbreviation,os,orthopaedic surgery - 207x00000x
+abbreviation,cp,chemical pathology
+abbreviation,bt,behavior technician
+abbreviation,im,integrative medicine
+abbreviation,dp,dentist - periodontist
+abbreviation,cn,clinical neurophysiology
+abbreviation,ps,psychiatry services
+synonym,neurologist program,neurology program
+synonym,urologist,urology
+synonym,urologist division,urology division
+synonym,oncologist unit,oncology unit
+synonym,neurologist - usa,neurology - usa
+abbreviation,dg,dentist-general
+abbreviation,pc,psychologist - clinical
+abbreviation,dp,dentist - prosthodontist
+synonym,nephrologist,nephrology
+synonym,orthopedic,orthopaedic
+abbreviation,it,infusion therapy
+synonym,radiologist clinic,radiology clinic
+abbreviation,dn,dept of neuropsychiatry
+abbreviation,cu,cardiology - usa
+synonym,urologist hospital,urology hospital
+abbreviation,fm,family med
+synonym,dept of ob gyn,dept of ob/gyn
+synonym,neurologist center,neurology center
+abbreviation,rp,radiology practice
+synonym,immunopathologist,immunopathology
+abbreviation,ip,ineligible provider
+abbreviation,pc,pathology center
+synonym,oncologist services,oncology services
+abbreviation,ph,dr. public health
+abbreviation,sl,state or local - 261qp0905x
+synonym,nephrology esrd,nephrology/esrd
+abbreviation,sm,sports medicine - 204c00000x
+abbreviation,og,obstetrics (no gyn)
+abbreviation,hp,hematology pathology
+abbreviation,sm,sleep medicine
+abbreviation,dl,dental laboratory
+synonym,pathologist - usa,pathology - usa
+abbreviation,em,dr. emergency medicine
+abbreviation,nm,neuromusculoskeletal medicine
+abbreviation,pn,psychiatric neurology
+synonym,audiologist division,audiology division
+synonym,radiologist dept,radiology dept
+abbreviation,cc,clinical cytogenetics
+synonym,hematologist,hematology
+abbreviation,ph,psychologist - health
+abbreviation,mc,midwife center
+abbreviation,sl,speech-languagepathologist
+abbreviation,so,dr. surgical oncology
+synonym,pathologist clinic,pathology clinic
+abbreviation,ds,dermatology services
+abbreviation,cp,child psychiatry
+abbreviation,em,emergency medi
+abbreviation,st,surgery-trauma
+abbreviation,nd,neurology dept
+abbreviation,sa,surgery assistant
+abbreviation,hd,hematology division
+abbreviation,ed,endocrinology division
+abbreviation,dp,dermatopathology - pathology
+abbreviation,lm,legal medicine
+synonym,pathologist program,pathology program
+synonym,dr. paediatrics,dr. pediatrics
+abbreviation,cg,clinical genetics (m.d.)
+abbreviation,do,dentist - orthodonture
+abbreviation,rp,radiology program
+abbreviation,cb,cognitive & behavioral
+synonym,cardiologist service,cardiology service
+synonym,dermatopathologist,dermatopathology
+synonym,allergy immunology,allergy/immunology
+abbreviation,sn,surgery - neurological
+synonym,colon and rectal,colon & rectal
+synonym,neonatologist,neonatology
+abbreviation,ss,spine surgery
+synonym,paediatrics dept,pediatrics dept
+abbreviation,es,eyewear supplier - 332h00000x
+synonym,haematology service,hematology service
+abbreviation,op,ophthalmology practice
+synonym,other unknown,other/unknown
+abbreviation,pm,psychosomatic medicine
+abbreviation,gu,gastroenterology - usa
+abbreviation,sm,sports med
+abbreviation,nd,neurodevelopmental disabilities
+abbreviation,cp,clinal psychology
+abbreviation,hh,hematology hospital
+abbreviation,rh,rehabilitation hospital
+abbreviation,gm,geriatric-medicine
+abbreviation,uu,urology - usa
+synonym,"psychologist, hspp","psychology, hspp"
+synonym,excluded opt out,excluded/opt out
+synonym,dr. hematologist,dr. hematology
+synonym,haematology program,hematology program
+abbreviation,os,dr. orthopedic surgery
+abbreviation,os,ophthalmologic surgery
+abbreviation,nd,neuropsychiatry dept
+abbreviation,sm,dr. sports medicine
+abbreviation,cm,case management
+abbreviation,cu,chiropractic unit
+abbreviation,dt,developmental therapist
+abbreviation,am,addiction medicine - 2083a0300x
+abbreviation,pf,psychologist - forensic - 103tf0200x
+synonym,child neurologist,child neurology
+abbreviation,nc,neurology center
+abbreviation,hs,hospital - special - 284300000x
+synonym,psychologist,psychology
+abbreviation,ha,hospice and p
+synonym,spec tech,spec/tech
+synonym,neurologist dept,neurology dept
+abbreviation,tu,taxi unit
+abbreviation,po,pediatric opthalmology
+synonym,otologist,otology
+abbreviation,rt,respiratory therapy
+synonym,hematologist center,hematology center
+abbreviation,cd,chiropractic division
+abbreviation,bi,body imaging
+abbreviation,fm,family medicine - 207q00000x
+abbreviation,dp,dietitian practice
+abbreviation,cp,counselor - psychoanalyst
+abbreviation,sm,dr. sleep medicine
+synonym,clinic center,clinic/center
+abbreviation,nd,nephrology division
+abbreviation,da,dept of audiology
+abbreviation,em,emergency medicine
+abbreviation,cp,chemical pathology]
+abbreviation,bc,birthing center
+abbreviation,od,oncology division
+synonym,orthopaedic,orthopedic
+synonym,paediatrics unit,pediatrics unit
+abbreviation,nc,neurocritical care
+abbreviation,ns,nephrology service
+abbreviation,em,electrodiagnostic medicine
+synonym,paediatrics - usa,pediatrics - usa
+abbreviation,gc,genetic counselor
+abbreviation,ap,anesthesiology practice
+synonym,0ncologist,0ncology
+abbreviation,nu,neuropsychiatry - usa
+abbreviation,at,aba therapist
+abbreviation,dc,dentistry clinic
+abbreviation,cp,clinical psychologist
+abbreviation,vs,vascular surgery - 2086s0129x
+abbreviation,du,dentistry unit
+abbreviation,no,neuro-ophthalmology
+abbreviation,cn,chiropractor - neurology - 111nn0400x
+abbreviation,dp,dermatology program
+abbreviation,us,urology services
+abbreviation,sl,state or local
+abbreviation,fa,rn first assistant
+synonym,endocrinologist dept,endocrinology dept
+abbreviation,pg,pediatrics - gastroenterology - 2080p0206x
+synonym,anesthesiologist,anesthesiology
+synonym,pediatric urologist,pediatric urology
+abbreviation,tp,taxi practice
+synonym,urologist unit,urology unit
+abbreviation,pa,pediatric allergy
+abbreviation,pa,physician assistant
+abbreviation,hs,hematology service
+abbreviation,cd,cardiology division
+abbreviation,gp,general-practice
+abbreviation,pn,pediatric neonatology
+synonym,0b gyn,0b/gyn
+abbreviation,pu,pharmacy unit
+synonym,gynecologist,gynecology
+abbreviation,sm,sleep-medicine
+synonym,neuro radiologist,neuro radiology
+abbreviation,de,dentist - endodontics
+abbreviation,dn,dept of neurology
+abbreviation,sm,sports medicine
+abbreviation,os,orthopedic-surgery
+abbreviation,dh,dermatology hospital
+abbreviation,ps,plastic surgery
+abbreviation,pr,pediatric radiology
+abbreviation,oc,ophthalmology clinic
+abbreviation,cc,critical care
+abbreviation,de,dentist-endodontist
+synonym,radiologist services,radiology services
+synonym,marriage and fa,marriage & fa
+synonym,neuroradiologist,neuroradiology
+abbreviation,pf,psychologist - forensic
+abbreviation,am,aviation medicine
+abbreviation,ti,transportation - individual
+abbreviation,og,obstetrics & gynecology - 207v00000x
+abbreviation,id,infectious-disease
+abbreviation,pm,pain medicine
+abbreviation,so,surgical oncology
+abbreviation,de,dept of endocrinology
+synonym,dr. haematology,dr. hematology
+synonym,dr. ob gyn,dr. ob/gyn
+abbreviation,oc,orthopedic chiropractor
+abbreviation,md,midwife division
+abbreviation,os,orthopedic surgery
+abbreviation,cu,cardiology unit
+synonym,nephrologist center,nephrology center
+synonym,colon rectal surgery,colon/rectal surgery
+abbreviation,op,optometrist - pediatric
+abbreviation,rt,radiologic technologist
+abbreviation,rt,radiation therapeutic
+abbreviation,oc,oncology center
+synonym,neurologist,neurology
+abbreviation,ap,anesthesiology program
+abbreviation,di,dermatological immunology
+abbreviation,gs,glaucoma specialist
+abbreviation,mp,midwife program
+abbreviation,os,ophthalmology service
+abbreviation,dd,dept of dietitian
+synonym,oncologist service,oncology service
+abbreviation,nd,neurology division
+abbreviation,pu,pharmacy - usa
+synonym,ob gyn unit,ob/gyn unit
+abbreviation,pf,psychologist-forensic
+abbreviation,pn,psychiatric nurse
+abbreviation,dp,dermatopathology (pathology)
+abbreviation,hr,hospital - rehabilitation - 283x00000x
+abbreviation,ep,endocrinology program
+abbreviation,cc,clinic/center
+abbreviation,ne,nutrition - education
+synonym,urologist center,urology center
+synonym,dept of hematologist,dept of hematology
+abbreviation,hc,hematology clinic
+synonym,dr. audiologist,dr. audiology
+abbreviation,dc,dermatology center
+synonym,audiologist practice,audiology practice
+abbreviation,op,optician program
+synonym,ob gyn division,ob/gyn division
+abbreviation,td,taxi dept
+abbreviation,dd,dietitian dept
+synonym,oncologist clinic,oncology clinic
+abbreviation,rt,respiratory therapist
+abbreviation,cp,chore provider
+abbreviation,ce,chiropractor examiner
+synonym,paediatrics,pediatrics
+abbreviation,pm,preventative medicine
+abbreviation,ps,pathology service
+abbreviation,sd,sleep disorders
+abbreviation,ah,adult health nu
+abbreviation,op,orofacial pain
+abbreviation,as,anesthesiology service
+abbreviation,nc,neurology - chiropractor
+synonym,child and family,child & family
+abbreviation,cc,cardiology clinic
+abbreviation,rd,random data
+abbreviation,do,dept of optician
+abbreviation,pc,pharmacist - clinician
+abbreviation,ba,behavioral analyst - 103k00000x
+abbreviation,dn,diagnostic neuroimaging
+abbreviation,as,anesthesiology services
+synonym,dept of haematology,dept of hematology
+abbreviation,pm,pulmonary medicine
+abbreviation,du,dietitian unit
+synonym,dr. oncologist,dr. oncology
+abbreviation,na,nurse anesthesia
+abbreviation,dd,dept of dentistry
+abbreviation,dd,dermatology division
+synonym,oncologist,oncology
+abbreviation,on,otology & neurotology
+abbreviation,rd,registered dietician
+abbreviation,cr,chiropractor - radiology
+abbreviation,pt,physical therapist
+synonym,audiologist - usa,audiology - usa
+abbreviation,dp,dermatology practice
+abbreviation,sa,substance abuse
+abbreviation,np,naturopathic-physician
+abbreviation,mc,mammographyclinic/center
+abbreviation,sm,sports-medicine
+abbreviation,ou,other/unknown
+abbreviation,gp,geriatric psychiatry
+abbreviation,pp,psychologist - psychoanalysis
+abbreviation,mu,midwife - usa
+abbreviation,dc,dietitian clinic
+abbreviation,cp,clinical - psychologist
+abbreviation,of,orthotic fitter
+abbreviation,es,eyewear supplier
+abbreviation,du,dermatology unit
+synonym,dr. nephrologist,dr. nephrology
+abbreviation,ns,neuropsychiatry services
+abbreviation,pn,pediatrics - nephrology - 2080p0210x

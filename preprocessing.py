@@ -1,323 +1,241 @@
-import pandas as pd
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+Preprocess provider specialties into mapping-ready text and flag JUNK.
+
+NO HARDCODED SYNONYMS — all expansions are read from your synonyms file.
+
+Output columns: raw_specialty, processed, is_junk (1/0)
+"""
+
 import re
-import numpy as np
-from typing import List, Dict, Any
+import csv
+import argparse
+from html import unescape
+from typing import Tuple, Dict, List, Optional
+from pathlib import Path
 
-class SpecialtyPreprocessor:
-    def __init__(self, synonyms_file: str = 'medical_synonyms.csv'):
-        """
-        Initialize preprocessor with synonyms mapping
-        
-        Args:
-            synonyms_file: Path to CSV file containing medical synonyms
-        """
-        self.synonyms_df = self.load_synonyms(synonyms_file)
-        self.junk_patterns = self.initialize_junk_patterns()
-        
-    def load_synonyms(self, synonyms_file: str) -> pd.DataFrame:
-        """Load synonyms from CSV file"""
-        try:
-            df = pd.read_csv(synonyms_file)
-            # Sort by priority for ordered processing
-            df = df.sort_values('priority')
-            return df
-        except FileNotFoundError:
-            print(f"Warning: Synonyms file {synonyms_file} not found. Using default synonyms.")
-            return self.create_default_synonyms()
-    
-    def create_default_synonyms(self) -> pd.DataFrame:
-        """Create default synonyms if file not found"""
-        default_data = {
-            'type': ['abbreviation'] * 10,
-            'pattern': ['ent', 'obgyn', 'gi', 'peds', 'psych', 'ortho', 'derm', 'neuro', 'cardio', 'uro'],
-            'replacement': ['otolaryngology', 'obstetrics gynecology', 'gastroenterology', 'pediatrics', 
-                          'psychiatry', 'orthopedic', 'dermatology', 'neurology', 'cardiology', 'urology'],
-            'priority': [1] * 10
-        }
-        return pd.DataFrame(default_data)
-    
-    def initialize_junk_patterns(self) -> List[str]:
-        """Initialize patterns for junk detection"""
-        return [
-            '####', '???', 'xyz', 'abc', 'tbd', 'temp', 'temporary', 
-            'unknown', 'n/a', 'na', 'none', 'test', 'sample', 'random',
-            'error', 'routine', 'med office', 'physician', 'dr', 'doctor'
-        ]
-    
-    def safe_string_convert(self, text: Any) -> str:
-        """
-        Safely convert any input to string, handling NaN, None, and other types
-        """
-        if text is None:
-            return ""
-        elif pd.isna(text):
-            return ""
-        elif isinstance(text, (int, float)):
-            return str(text)
-        elif isinstance(text, str):
-            return text
-        else:
-            return str(text)
-    
-    def normalize_text(self, text: Any) -> str:
-        """
-        Basic text normalization with safe type handling
-        """
-        # Safely convert to string first
-        text_str = self.safe_string_convert(text)
-        
-        if not text_str:
-            return ""
-        
-        # Convert to lowercase
-        text_str = text_str.lower()
-        
-        # Remove extra whitespace
-        text_str = ' '.join(text_str.split())
-        
-        # Remove punctuation except &, /, - (for compound terms)
-        text_str = re.sub(r'[^\w\s&/-]', ' ', text_str)
-        
-        # Remove extra spaces again
-        text_str = ' '.join(text_str.split())
-        
-        return text_str.strip()
-    
-    def is_junk_entry(self, text: str) -> bool:
-        """
-        Detect junk entries that should be filtered out
-        """
-        if not text or len(text.strip()) <= 2:
-            return True
-        
-        # Check for junk patterns
-        if any(pattern in text.lower() for pattern in self.junk_patterns):
-            return True
-        
-        # Very short entries (1-2 chars) that aren't common abbreviations
-        short_valid_abbr = ['ir', 'gi', 'ed', 'er', 'icu', 'picu', 'nicu']
-        if len(text) <= 3 and text not in short_valid_abbr:
-            return True
-        
-        # Contains only numbers or special characters
-        if re.match(r'^[\d\W]+$', text):
-            return True
-        
-        return False
-    
-    def apply_synonym_mapping(self, text: str) -> str:
-        """
-        Apply synonym mappings from CSV file with safe pattern handling
-        """
-        if not text:
-            return ""
-        
-        processed_text = text
-        
-        # Apply replacements in priority order
-        for _, row in self.synonyms_df.iterrows():
-            pattern = self.safe_string_convert(row['pattern'])
-            replacement = self.safe_string_convert(row['replacement'])
-            mapping_type = self.safe_string_convert(row['type'])
-            
-            # Skip if pattern is empty after conversion
-            if not pattern:
-                continue
-                
-            try:
-                if mapping_type in ['abbreviation', 'misspelling', 'short_form', 'professional_title', 'specialty_variation']:
-                    # Word-level replacements (exact word matches)
-                    processed_text = re.sub(r'\b' + re.escape(pattern) + r'\b', replacement, processed_text)
-                
-                elif mapping_type in ['phrase', 'variation']:
-                    # Phrase-level replacements
-                    processed_text = re.sub(pattern, replacement, processed_text, flags=re.IGNORECASE)
-                
-                elif mapping_type in ['department', 'professional_prefix', 'institutional']:
-                    # Remove these terms entirely
-                    processed_text = re.sub(r'\b' + re.escape(pattern) + r'\b', replacement, processed_text)
-            
-            except (re.error, TypeError) as e:
-                # Fallback: simple string replacement for problematic patterns
-                print(f"Warning: Regex error for pattern '{pattern}': {e}. Using string replacement.")
-                processed_text = processed_text.replace(pattern, replacement)
-        
-        # Clean up extra spaces
-        processed_text = ' '.join(processed_text.split())
-        
-        return processed_text.strip()
-    
-    def handle_special_cases(self, text: str) -> str:
-        """
-        Handle complex special cases and patterns
-        """
-        if not text:
-            return ""
-            
-        special_cases = {
-            r'ob\s*[/]?\s*gyn': 'obstetrics gynecology',
-            r'psych\s*[/&]?\s*neuro': 'psychiatry neurology',
-            r'heme\s*[/]?\s*onc': 'hematology oncology',
-            r'pulm\s*[/]?\s*crit': 'pulmonary critical care',
-            r'cardio\s*[/]?\s*thoracic': 'cardiothoracic',
-            r'ortho\s*[/]?\s*trauma': 'orthopedic trauma',
-        }
-        
-        processed_text = text
-        for pattern, replacement in special_cases.items():
-            try:
-                processed_text = re.sub(pattern, replacement, processed_text, flags=re.IGNORECASE)
-            except (re.error, TypeError) as e:
-                print(f"Warning: Special case pattern error '{pattern}': {e}")
-                continue
-        
-        return processed_text
-    
-    def split_multi_specialties(self, text: str) -> List[str]:
-        """
-        Split multi-specialty entries into individual specialties
-        """
-        if not text:
-            return []
-        
-        # Common separators for multi-specialties
-        separators = [r'/', r'&', r' and ', r',', r'\+']
-        
-        specialties = [text]
-        
-        for sep in separators:
-            new_specialties = []
-            for specialty in specialties:
-                try:
-                    if re.search(sep, specialty, re.IGNORECASE):
-                        split_parts = re.split(sep, specialty, flags=re.IGNORECASE)
-                        new_specialties.extend([part.strip() for part in split_parts if part.strip()])
-                    else:
-                        new_specialties.append(specialty)
-                except (re.error, TypeError) as e:
-                    print(f"Warning: Split error for '{specialty}' with separator '{sep}': {e}")
-                    new_specialties.append(specialty)
-            specialties = new_specialties
-        
-        return [s for s in specialties if s and len(s) > 2]
-    
-    def preprocess_specialty(self, raw_specialty: Any) -> List[str]:
-        """
-        Complete preprocessing pipeline for a single specialty entry
-        
-        Returns:
-            List of processed specialty strings (empty list for junk entries)
-        """
-        # Step 1: Safely convert and normalize text
-        normalized = self.normalize_text(raw_specialty)
-        
-        # Step 2: Check for junk
-        if self.is_junk_entry(normalized):
-            return []
-        
-        # Step 3: Handle special cases
-        processed = self.handle_special_cases(normalized)
-        
-        # Step 4: Apply synonym mapping
-        processed = self.apply_synonym_mapping(processed)
-        
-        # Step 5: Split multi-specialties
-        specialties = self.split_multi_specialties(processed)
-        
-        # Step 6: Final cleaning and filtering
-        final_specialties = []
-        for specialty in specialties:
-            # Remove any remaining junk
-            if not self.is_junk_entry(specialty) and len(specialty) >= 3:
-                # Final normalization
-                cleaned = ' '.join(specialty.split())
-                final_specialties.append(cleaned)
-        
-        return final_specialties
-    
-    def preprocess_dataframe(self, df: pd.DataFrame, specialty_column: str = 'raw_specialty') -> pd.DataFrame:
-        """
-        Preprocess an entire DataFrame of specialty entries
-        
-        Args:
-            df: Input DataFrame
-            specialty_column: Name of column containing raw specialties
-            
-        Returns:
-            DataFrame with preprocessing results
-        """
-        results = []
-        
-        # Clean the input dataframe - handle NaN values in the specialty column
-        df_clean = df.copy()
-        df_clean[specialty_column] = df_clean[specialty_column].fillna('').astype(str)
-        
-        for idx, row in df_clean.iterrows():
-            raw_specialty = row[specialty_column]
-            
-            # Preprocess
-            processed_specialties = self.preprocess_specialty(raw_specialty)
-            
-            # Determine if junk
-            is_junk = len(processed_specialties) == 0
-            
-            # Create result entry
-            result = {
-                'raw_specialty': raw_specialty,
-                'processed_specialties': '|'.join(processed_specialties) if processed_specialties else '',
-                'is_junk': is_junk,
-                'specialty_count': len(processed_specialties)
-            }
-            
-            results.append(result)
-        
-        return pd.DataFrame(results)
+import pandas as pd
 
-# Example usage and testing
+
+def load_synonyms(path: str) -> Dict[str, str]:
+    """
+    Load a synonyms CSV with columns: type,pattern,replacement.
+    Uses ONLY rows where type ∈ {abbreviation, synonym}.
+    Returns a dict mapping normalized pattern -> normalized replacement.
+    """
+    if not path:
+        return {}
+    p = Path(path)
+    if not p.exists():
+        raise FileNotFoundError(f"Synonyms file not found: {path}")
+    out: Dict[str, str] = {}
+    with open(p, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for r in reader:
+            typ = (r.get("type") or "").strip().lower()
+            pat = (r.get("pattern") or "").strip().lower()
+            rep = (r.get("replacement") or "").strip().lower()
+            if typ in {"abbreviation", "synonym"} and pat and rep and pat != rep:
+                out[_norm(pat)] = _norm(rep)
+    return out
+
+
+def _fix_mojibake(s: str) -> str:
+    replacements = {
+        "Ã¢â‚¬â€œ": "",
+        "ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“": "",
+        "Ã¢â‚¬": "",
+        "Â": "",
+    }
+    for bad, good in replacements.items():
+        s = s.replace(bad, good)
+    return unescape(s)
+
+
+def _norm(s: str) -> str:
+    s = (s or "").strip()
+    s = _fix_mojibake(s)
+    s = s.replace("\u00A0", " ")
+    s = re.sub(r"\s+", " ", s)
+    return s
+
+
+def _to_lower_tokens(s: str) -> List[str]:
+    return [t for t in re.findall(r"[a-z0-9]+", s.lower()) if t]
+
+
+class PreprocessSpecialty:
+    """
+    Cleans raw specialty strings and applies ONLY file-driven synonyms.
+    - numbers→letters inside words
+    - whitespace/case/punctuation normalization
+    - multi-specialty connectors normalized to " / "
+    - noise stripping (dept/clinic/geo/honorifics)
+    - parentheses flattened
+    - HTML entities + common mojibake fix
+    - NUCC code passthrough (e.g., 207RC0000X)
+    - junk detection (placeholders, clearly non-medical)
+    """
+
+    PLACEHOLDERS = {
+        "tbd", "temporary", "unknown", "n/a", "na", "none", "no data", "random data",
+        "unk", "-", "", "####", "n a", "n.a.", "nil", "null"
+    }
+    NON_MEDICAL = {
+        "taxi", "ambulance", "driver", "contractor", "agency", "public", "sector",
+        "admin", "accounts", "billing"
+    }
+    ORG_NOISE = {
+        "dept", "department", "division", "program", "service", "center", "centre",
+        "unit", "office", "hospital", "clinic", "outpatient", "inpatient", "opd",
+        "ed", "er"
+    }
+    GEO_NOISE = {"usa", "us", "united", "states", "india", "canada", "uk", "united kingdom"}
+    HONORIFICS = {"dr", "mr", "mrs", "ms", "prof", "md."}
+    DIGIT_LETTER = str.maketrans({"0": "o", "1": "i", "3": "e", "5": "s", "7": "t", "8": "b"})
+    NUCC_CODE_RE = re.compile(r"\b[0-9A-Z]{9}X\b", re.I)
+    PARENS_RE = re.compile(r"\(([^)]+)\)")
+
+    def __init__(self, synonyms_map: Dict[str, str]):
+        """
+        synonyms_map: normalized pattern -> normalized replacement (from your CSV)
+        """
+        self.syn_map = dict(synonyms_map)
+        # Precompile phrase patterns (multiword first) for boundary-safe replacement
+        pats = sorted(self.syn_map.keys(), key=len, reverse=True)
+        self._regexes: List[Tuple[re.Pattern, str]] = []
+        for pat in pats:
+            escaped = re.escape(pat)
+            rx = re.compile(rf"(?<!\w){escaped}(?!\w)")
+            self._regexes.append((rx, self.syn_map[pat]))
+
+    def _digits_to_letters(self, s: str) -> str:
+        def repl(m):
+            word = m.group(0)
+            if re.search(r"[0-9]", word):
+                return word.translate(self.DIGIT_LETTER)
+            return word
+        return re.sub(r"[A-Za-z0-9]+", repl, s)
+
+    def _strip_noise_tokens(self, s: str) -> str:
+        toks = _to_lower_tokens(s)
+        kept = []
+        for t in toks:
+            if t in self.HONORIFICS:  continue
+            if t in self.ORG_NOISE:   continue
+            if t in self.GEO_NOISE:   continue
+            kept.append(t)
+        return " ".join(kept)
+
+    def _standardize_separators(self, s: str) -> str:
+        s = re.sub(r"\s*&\s*", " / ", s)
+        s = re.sub(r"\s*\+\s*", " / ", s)
+        s = re.sub(r"\s*(,|;)\s*", " / ", s)
+        s = re.sub(r"\s*/\s*", " / ", s)
+        s = re.sub(r"\band\b", " / ", s, flags=re.I)
+        s = re.sub(r"( / )+", " / ", s)
+        return s
+
+    def _clean_parentheses(self, s: str) -> str:
+        s = self.PARENS_RE.sub(lambda m: " " + m.group(1), s)
+        s = re.sub(r"\s+", " ", s).strip()
+        return s
+
+    def _normalize_punct_case(self, s: str) -> str:
+        s = s.lower()
+        s = re.sub(r"[-–—]", " ", s)
+        s = re.sub(r"\s+", " ", s).strip()
+        return s
+
+    def _apply_synonyms(self, s: str) -> str:
+        if not self._regexes:
+            return s
+        out = s
+        for rx, repl in self._regexes:
+            out = rx.sub(repl, out)
+        out = re.sub(r"\s+", " ", out).strip()
+        return out
+
+    def _select_primary_text(self, s: str) -> str:
+        m = self.NUCC_CODE_RE.search(s.upper())
+        if m:
+            return m.group(0).upper()
+        return s
+
+    def _is_placeholder_or_empty(self, s: str) -> bool:
+        return s.lower() in self.PLACEHOLDERS or s.strip() == ""
+
+    def _is_non_medical(self, s: str) -> bool:
+        toks = _to_lower_tokens(s)
+        if not toks:
+            return True
+        nm = sum(t in self.NON_MEDICAL for t in toks)
+        med_hint = any(t in {
+            "medicine","surgery","cardiology","neurology","dermatology","radiology","oncology",
+            "pediatrics","psychiatry","pathology","anesthesiology","urology","nephrology",
+            "endocrinology","gastroenterology","hematology","ophthalmology","otolaryngology",
+            "rehabilitation","genetics","rheumatology","pulmonology"
+        } for t in toks)
+        return bool(nm and not med_hint)
+
+    def process_one(self, raw: str) -> Tuple[str, int]:
+        orig = "" if pd.isna(raw) else str(raw)
+        s = _norm(orig)
+        if self._is_placeholder_or_empty(s):
+            return ("junk", 1)
+        s = self._clean_parentheses(s)
+        s = self._digits_to_letters(s)
+        s = self._strip_noise_tokens(s)
+        if not s:
+            return ("junk", 1)
+        s = self._standardize_separators(s)
+        s = self._normalize_punct_case(s)
+        s = self._apply_synonyms(s)  # ONLY file-driven synonyms here
+        s = re.sub(r"\s+", " ", s).strip()
+        s = self._select_primary_text(s)
+        if self._is_non_medical(s) or len(re.sub(r"[^a-zA-Z]+", "", s)) < 3:
+            return (s if s else "junk", 1)
+        return (s, 0)
+
+    def process_dataframe(self, df: pd.DataFrame, col_guess: Optional[str] = None) -> pd.DataFrame:
+        if col_guess is None:
+            candidates = [c for c in df.columns
+                          if re.search(r"(special|dept|discipline|service|category|name)", c, re.I)]
+            col_guess = candidates[0] if candidates else df.columns[0]
+        rows = []
+        for raw in df[col_guess].astype(str).tolist():
+            processed, junk = self.process_one(raw)
+            rows.append((raw, processed, junk))
+        return pd.DataFrame(rows, columns=["raw_specialty", "processed", "is_junk"])
+
+
+def detect_input_column(df: pd.DataFrame) -> str:
+    cands = [c for c in df.columns
+             if re.search(r"(special|dept|discipline|service|category|name)", c, re.I)]
+    return cands[0] if cands else df.columns[0]
+
+
 def main():
-    # Initialize preprocessor
-    preprocessor = SpecialtyPreprocessor('medical_synonyms.csv')
-    
-    # Test with various input types including problematic ones
-    test_cases = [
-        "ENT",
-        "OB/GYN Pain Management",
-        "Peds Cardio",
-        "GI Department",
-        "Psych & Neuro",
-        "Anesthesiology",
-        "ABC",  # Junk
-        "Dept of Ophthalmology",
-        None,  # None value
-        float('nan'),  # NaN value
-        123,  # Number
-        ""  # Empty string
-    ]
-    
-    print("Testing preprocessing with various inputs:")
-    for test in test_cases:
-        result = preprocessor.preprocess_specialty(test)
-        print(f"'{test}' -> {result}")
-    
-    # Example with DataFrame containing problematic values
-    sample_data = pd.DataFrame({
-        'raw_specialty': [
-            'ENT',
-            'OB/GYN',
-            'Peds Cardiology',
-            'GI Dept',
-            'XYZ',  # Junk
-            'Pain Management Clinic',
-            None,  # None value
-            float('nan'),  # NaN
-            123,  # Number
-            ''  # Empty string
-        ]
-    })
-    
-    processed_df = preprocessor.preprocess_dataframe(sample_data)
-    print("\nProcessed DataFrame:")
-    print(processed_df)
+    ap = argparse.ArgumentParser(description="Preprocess provider specialties (synonyms only from file).")
+    ap.add_argument("--input", required=True, help="Path to input_specialties.csv")
+    ap.add_argument("--out", required=True, help="Path to write preprocessed_specialties.csv")
+    ap.add_argument("--synonyms", required=True, help="Path to synonyms CSV (type,pattern,replacement)")
+    args = ap.parse_args()
+
+    syn = load_synonyms(args.synonyms)
+    pre = PreprocessSpecialty(synonyms_map=syn)
+
+    df_in = pd.read_csv(args.input)
+    col = detect_input_column(df_in)
+    df_out = pre.process_dataframe(df_in, col_guess=col)
+
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+    df_out.to_csv(args.out, index=False)
+    print(f"Wrote {len(df_out)} rows to {args.out}")
+    print("Columns: raw_specialty, processed, is_junk")
+
 
 if __name__ == "__main__":
     main()
