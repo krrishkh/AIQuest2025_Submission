@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
-Pipeline:
-1. Preprocess raw specialties → processed + junk flag.
-2. Map processed specialties → NUCC taxonomy codes (skip junk).
+Main Pipeline: Specialty → NUCC Taxonomy Mapper
+------------------------------------------------
+Steps:
+1. Preprocess raw specialties → (processed, is_junk)
+2. Map processed specialties → NUCC taxonomy codes (skip junk)
+3. Merge and write final CSV
 """
 
 import argparse
@@ -23,7 +26,7 @@ def main():
     ap.add_argument("--out", required=True, help="Output mapped CSV")
     args = ap.parse_args()
 
-    # --- Step 1: Preprocess ---
+    # --- Step 1: Preprocessing ---
     print("🔹 Loading synonyms...")
     syn_map = load_synonyms(args.synonyms)
     pre = PreprocessSpecialty(synonyms_map=syn_map)
@@ -43,28 +46,44 @@ def main():
     df_map_input = df_pre[df_pre["is_junk"] == 0].copy()
     df_map = mapper.map_dataframe(df_map_input, col="processed")
 
-    # --- Step 3: Merge results ---
-    print("🔹 Merging results...")
-    df_final = df_pre.merge(df_map, on="raw_specialty", how="left")
+    # --- Step 2.5: Handle duplicate raw_specialty entries safely ---
+    if df_map["raw_specialty"].duplicated().any():
+        print("⚠️  Duplicates found in mapped data — aggregating results...")
+        df_map = (
+            df_map.groupby("raw_specialty", as_index=False)
+            .agg({
+                "mapped_code": lambda x: "|".join(sorted(set(x))),
+                "confidence": "mean",
+                "explain": lambda x: "; ".join(set(x))[:250],
+            })
+        )
 
-    # Rename mapped_code → nucc_codes to align with output spec
+    # --- Step 3: Merge results ---
+    df_pre["__row_id__"] = range(len(df_pre))
+    df_final = (
+        df_pre
+        .merge(df_map, on="raw_specialty", how="left", sort=False)
+        .sort_values("__row_id__")
+        .drop(columns="__row_id__")
+        .reset_index(drop=True)
+    )
+
+    # Rename mapped_code → nucc_codes
     df_final.rename(columns={"mapped_code": "nucc_codes"}, inplace=True)
 
-    # Fill missing (junk) mappings
-    for col in ["nucc_codes", "confidence", "explain"]:
-        if col not in df_final.columns:
-            df_final[col] = None
-
-    df_final["nucc_codes"].fillna("JUNK", inplace=True)
-    df_final["confidence"].fillna(0.0, inplace=True)
-    df_final["explain"].fillna("junk-flagged", inplace=True)
+    # Fill missing mappings for junk specialties
+    df_final = df_final.assign(
+        nucc_codes=df_final["nucc_codes"].fillna("JUNK"),
+        confidence=df_final["confidence"].fillna(0.0),
+        explain=df_final["explain"].fillna("junk-flagged")
+    )
 
     # --- Step 4: Save output ---
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     df_final.to_csv(args.out, index=False)
 
     print(f"✅ Wrote final mapped file → {args.out}")
-    print("Columns: raw_specialty, processed, is_junk, nucc_codes, confidence, explain")
+    print("📄 Columns: raw_specialty, processed, is_junk, nucc_codes, confidence, explain")
 
 
 if __name__ == "__main__":
